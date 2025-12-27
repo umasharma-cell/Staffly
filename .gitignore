@@ -2,6 +2,7 @@
 node_modules/
 
 # Environment variables
+.claude
 .env
 .env.local
 .env.development.local
