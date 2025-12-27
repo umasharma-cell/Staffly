@@ -1,0 +1,50 @@
+.Nav .navbar { 
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  color: white; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  height: 70px; 
+  text-align: center;
+} 
+ 
+.Nav .logo { 
+  font-size: 24px; 
+  border-radius: 10px;
+  font-weight: 700;
+  color: whitesmoke;
+} 
+ 
+.Nav .nav-links { 
+display: flex;
+  gap: 50px;
+ 
+} 
+ 
+.Nav button { 
+  text-decoration: none; 
+  color: white; 
+  background: #536090; 
+  border-radius: 5px; 
+  transition: 0.3s;
+  padding: 5px 10px;
+  
+
+}
+
+
+.Nav .nav-button:hover { 
+  background: #41507b; 
+}
+
+/* Adding styles for the auth modal to ensure it displays properly */
+.Nav .auth-modal {
+  position: fixed;
+  top: 60px; /* Adjusted to account for smaller navbar */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+}
