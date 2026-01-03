@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../config/api";
 import "../styles/ModernAuth.css";
 
 const SignupForm = () => {
@@ -38,7 +39,7 @@ const SignupForm = () => {
     setSuccessMessage("");
 
     try {
-      const response = await fetch("http://localhost:4000/auth/signup", {
+      const response = await fetch(API_ENDPOINTS.SIGNUP, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

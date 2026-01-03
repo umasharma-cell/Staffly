@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../config/api";
 import "../styles/EmployeesList.css";
 
 const EmployeesList = () => {
@@ -23,7 +24,7 @@ const EmployeesList = () => {
   const fetchEmployees = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:4000/employees", {
+      const response = await fetch(API_ENDPOINTS.EMPLOYEES, {
         headers: {
           "auth": token
         }
@@ -74,7 +75,7 @@ const EmployeesList = () => {
     if (window.confirm("Are you sure you want to delete this employee?")) {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:4000/employees/${id}`, {
+        const response = await fetch(`${API_ENDPOINTS.EMPLOYEES}/${id}`, {
           method: 'DELETE',
           headers: {
             "auth": token

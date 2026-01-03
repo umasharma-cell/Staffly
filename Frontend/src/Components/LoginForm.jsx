@@ -24,7 +24,7 @@ const LoginForm = () => {
     setSuccessMessage("");
 
     try {
-      const response = await fetch("http://localhost:4000/auth/login", {
+      const response = await fetch(API_ENDPOINTS.LOGIN, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_ENDPOINTS } from '../config/api';
 import '../styles/AddEmployee.css';
 
 const AddEmployee = () => {
@@ -87,7 +88,7 @@ const AddEmployee = () => {
       }
       
       // Send the request to your backend API
-      const response = await fetch('http://localhost:4000/employees', {
+      const response = await fetch(API_ENDPOINTS.EMPLOYEES, {
         method: 'POST',
         // Don't set Content-Type header when sending FormData
         // The browser will automatically set it including the boundary

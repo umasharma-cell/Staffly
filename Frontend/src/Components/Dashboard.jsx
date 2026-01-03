@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_ENDPOINTS } from "../config/api";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
@@ -33,7 +34,7 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:4000/employees", {
+      const response = await fetch(API_ENDPOINTS.EMPLOYEES, {
         headers: {
           "auth": token
         }
