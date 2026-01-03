@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/AddEmployee.css';
 
 const AddEmployee = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     employeeId: '',
     name: '',
@@ -160,6 +162,13 @@ const AddEmployee = () => {
     <div className="employee-form-container">
       <div className="employee-form-card">
         <div className="form-header">
+          <button
+            onClick={() => navigate('/dashboard')}
+            className="back-button"
+            type="button"
+          >
+            <span>←</span> Back to Dashboard
+          </button>
           <h2>Add New Employee</h2>
         </div>
         
